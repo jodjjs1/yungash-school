@@ -84,13 +84,16 @@ function goLeft() {
     list.style.marginLeft = position + 'px';
 }
 
-createDots(listElems.length);
+document.addEventListener('DOMContentLoaded', function(){
+    createDots(listElems.length);
 
-AODDot(1);
-AODDot(2);
+    AODDot(1);
+    AODDot(2);
 
-setInterval(goRight, 4000);
+    setInterval(goRight, 4000);
 
-btns[0].addEventListener('click', goLeft);
+    btns[0].addEventListener('click', goLeft);
 
-btns[1].addEventListener('click', goRight);
+    btns[1].addEventListener('click', goRight);
+});
+

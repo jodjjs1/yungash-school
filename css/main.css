@@ -1,11 +1,15 @@
 
 html, body {
-    background: rgba(87, 155, 219, 0.24) ;
+    background: #D7E7F6 ;
 
     margin: 0px;
 
     height: 100%;
-    overflow: hidden;
+    
+}
+
+body {
+    overflow-y: scroll;
 }
 
 p, h1, h2 {
@@ -171,9 +175,12 @@ p, h1, h2 {
 
 /* ------------- sidebar ----------------- */
 .sidebar {
-    height: 296px;
-    background: #B2D3F2;
+    height: 385px;
+    background-color: #041373;
     /* блок */
+
+    transition-property: height;
+    transition-duration: 0.5s;
 
     padding-left: 18px;
     padding-top: 19px;
@@ -183,26 +190,39 @@ p, h1, h2 {
     border-radius: 26px;
 }
 
-.sidebar li {
+.nav-item {
     align-items: center;
-    display: flex;
+    /* display: flex; */
 
     padding-bottom: 30px;
 }
 
+.mpt {
+    display: flex;
+
+    margin-bottom: 17px;
+}
+
 .sidebar img {
-    margin-right: 12px;
+    margin-right: 11px;
+    transform: rotate(-90deg);
 }
 
-
-
-.sidebar li .submenu{ 
-	list-style: none; 
-	margin: 0; 
-	padding: 0; 
-	padding-left: 1rem; 
-	padding-right: 1rem;
+.submenu {
+    display: none;
+    /* height: 0; */
+    
 }
+
+.submenu li {
+    padding-left: 27px;
+
+    margin-bottom: 10px;
+
+    transition-property: margin-bottom;
+    transition-duration: 0.5s;
+}
+
 
 .sidebar a {
     font-family: 'Roboto', sans-serif;
@@ -210,7 +230,7 @@ p, h1, h2 {
     line-height: 16px;
     text-transform: uppercase;
     text-decoration: none;
-    color: #000000;
+    color: #fff;
 
     padding: 0;
 }
