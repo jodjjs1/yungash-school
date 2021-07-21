@@ -21,6 +21,7 @@ p, h1, h2 {
     display: flex;
     max-width: 1172px;
     min-height: 100%;
+    height: auto;
 
     margin-left: auto;
     margin-right: auto;
@@ -33,6 +34,7 @@ p, h1, h2 {
     width: 272px;
 
     min-height: 100%;
+    height: auto;
 
     display: inline-block;
 }
@@ -175,16 +177,17 @@ p, h1, h2 {
 
 /* ------------- sidebar ----------------- */
 .sidebar {
-    height: 385px;
+    height: auto;
     background-color: #041373;
     /* блок */
 
     transition-property: height;
     transition-duration: 0.5s;
 
-    padding-left: 18px;
-    padding-top: 19px;
-    padding-bottom: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 1px;
 
     box-shadow: 0px 4px 14px -6px #687E93;
     border-radius: 26px;
@@ -194,13 +197,27 @@ p, h1, h2 {
     align-items: center;
     /* display: flex; */
 
-    padding-bottom: 30px;
+    background: #CFE7FF;
+    border-radius: 26px;
+
+    padding-left: 11px;
+    padding-top: 8px;
+    padding-bottom: 0px;
+
+    padding-bottom: 20px;
+
+    margin-bottom: 14px;
 }
 
 .mpt {
     display: flex;
 
-    margin-bottom: 17px;
+    
+    /* padding-right: auto; */
+
+
+    margin-right: 15px;
+    margin-bottom: 0px;
 }
 
 .sidebar img {
@@ -211,28 +228,45 @@ p, h1, h2 {
 .submenu {
     display: none;
     /* height: 0; */
-    
+    background-color: #CFE7FF;
+}
+
+.show, .collapsing {
+    display: block;
 }
 
 .submenu li {
     padding-left: 27px;
 
-    margin-bottom: 10px;
+    margin-bottom: 4px;
 
     transition-property: margin-bottom;
     transition-duration: 0.5s;
 }
 
 
-.sidebar a {
-    font-family: 'Roboto', sans-serif;
+.sidebar .nav-link {
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-weight: 700;
     font-size: 14px;
     line-height: 16px;
     text-transform: uppercase;
     text-decoration: none;
-    color: #fff;
+    color: #000;
 
     padding: 0;
+}
+
+.nav-sublink {
+    font-weight: 600;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: -0.015em;
+    text-decoration-line: underline;
+    color: #000000;
+
 }
 /* --------------------------------------- */
 
@@ -305,7 +339,8 @@ p, h1, h2 {
 }
 
 .navbar-text a {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
     font-size: 14px;
     line-height: 16px;
     text-transform: uppercase;
@@ -484,12 +519,14 @@ p, h1, h2 {
 
 .whitetext.hello {
     height: 84px;
+    
 }
 
 .whitetext.hello p {
-    font-weight: 700;
     font-size: 12px;
     line-height: 18px;
+    font-style: normal;
+    font-weight: 500;
 }
 
 .whitetext.att {
@@ -509,7 +546,7 @@ p, h1, h2 {
 }
 
 .text p {
-    font-weight: 600;
+    font-weight: normal;
     font-size: 14px;
     line-height: 19px;
 
